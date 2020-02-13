@@ -1,6 +1,34 @@
-<!DOCTYPE html>
+const colors = {
+    green: {
+      wrapperBackground: "#E6E1C3",
+      headerBackground: "#C1C72C",
+      headerColor: "black",
+      photoBorderColor: "#black"
+    },
+    blue: {
+      wrapperBackground: "#5F64D3",
+      headerBackground: "#26175A",
+      headerColor: "white",
+      photoBorderColor: "#73448C"
+    },
+    pink: {
+      wrapperBackground: "#879CDF",
+      headerBackground: "#FF8374",
+      headerColor: "white",
+      photoBorderColor: "#FEE24C"
+    },
+    red: {
+      wrapperBackground: "#DE9967",
+      headerBackground: "#870603",
+      headerColor: "white",
+      photoBorderColor: "white"
+    }
+  };
+  
+  function generateHTML(data) {
+    return `<!DOCTYPE html>
   <html lang="en">
-    <head>
+     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -24,7 +52,7 @@
            height: 100%;
            }
            .wrapper {
-           background-color: red;
+           background-color: ${colors[data.color].wrapperBackground};
            padding-top: 100px;
            }
            body {
@@ -66,8 +94,8 @@
            display: flex;
            justify-content: center;
            flex-wrap: wrap;
-           background-color: green;
-           color: black;
+           background-color: ${colors[data.color].headerBackground};
+           color: ${colors[data.color].headerColor};
            padding: 10px;
            width: 95%;
            border-radius: 6px;
@@ -78,7 +106,7 @@
            border-radius: 50%;
            object-fit: cover;
            margin-top: -75px;
-           border: 6px solid cyan;
+           border: 6px solid ${colors[data.color].photoBorderColor};
            box-shadow: rgba(0, 0, 0, 0.3) 4px 1px 20px 4px;
            }
            .photo-header h1, .photo-header h2 {
@@ -121,8 +149,8 @@
            .card {
              padding: 20px;
              border-radius: 6px;
-             background-color: blue;
-             color: black;
+             background-color: ${colors[data.color].headerBackground};
+             color: ${colors[data.color].headerColor};
              margin: 20px;
            }
            
@@ -142,53 +170,6 @@
               zoom: .75; 
             } 
            }
-        </style>
-    </head>
-    <body>
-        <header>
-        <div class="wrapper">
-            <div class="photo-header">
-                <img src="https://avatars1.githubusercontent.com/u/56312888?v=4" alt="">
-                <h1>Hello!</h1>
-                <h2>My Name is James Dobbe!</h2>
-                <h3>I currently work @ Cafe Veloce</h3>
-                <div class="links-nav">
-                    <a href="https://www.github.com/dobbe2" class="nav-links"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="https://www.google.com/maps/place/woodinville,wa" class="nav-links"><i class="fas fa-location-arrow"></i> Location</a>
-                    <a href="https://dobbe2.github.io/portfolio-two-point-oh/" class="nav-link"><i class="fas fa-blog"></i> Blog</a>
-                </div>
-            </div>
-        </div>
-        </header>
-
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h4>Biography Goes Here</h4>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col card">
-                    <h3>Repositories Go Here</h3>
-                    1000
-                </div>
-                
-                <div class="col card">
-                    <h3>Followers</h3>
-                    1
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="card col">
-                    <h3>Starzzzz</h3>
-                    So many starz
-                </div>
-                <div class="card col">
-                    <h3>Following</h3>
-                    420
-                </div>
-            </div>
-        </div>
-    </body>    
+        </style>`
+          }
+  

@@ -1,0 +1,27 @@
+{
+  "name": "developer-profile-generator",
+  "version": "1.0.0",
+  "description": "A command-line application that dynamically generates a PDF profile from a GitHub username.",
+  "main": "createHTML.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "electron": "^8.0.0",
+    "electron-html-to": "^2.6.0",
+    "fs": "^0.0.1-security",
+    "inquirer": "^7.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dobbe2/developer-profile-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dobbe2/developer-profile-generator/issues"
+  },
+  "homepage": "https://github.com/dobbe2/developer-profile-generator#readme"
+}
