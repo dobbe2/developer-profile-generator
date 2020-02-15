@@ -32,7 +32,7 @@ I was unable to fix this issue after working with my tutor. She has other studen
 
 ## Application in action
 
-![gif app](https://i.imgur.com/SlMj6rG.gif)
+![gif app](./assets/Developer-Profile-Generator.gif)
 
 
 ## NPM's and Libraries Used:
