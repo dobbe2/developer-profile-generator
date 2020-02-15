@@ -28,7 +28,11 @@ The PDF will be populated with the following:
 
 ![](https://i.imgur.com/eBf3Jsm.png)
 
-I was unable to get the "GutHub Stars" to work.  I am sure I can figure this out with a little more time.
+I was unable to fix this issue after working with my tutor. She has other students having the same issue with electron-html-to.
+
+## Application in action
+
+![gif app](https://i.imgur.com/SlMj6rG.gif)
 
 
 ## NPM's and Libraries Used:
