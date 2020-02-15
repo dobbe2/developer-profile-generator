@@ -2,7 +2,7 @@
 A command-line application that dynamically generates a PDF profile from a GitHub username and choice of color.
 
 
-![](https://i.imgur.com/SRdGM1P.png)
+![](https://i.imgur.com/FnARsyY.png)
 ![](https://i.imgur.com/D6BUVWs.png)
 
 ## Features
@@ -20,6 +20,7 @@ The PDF will be populated with the following:
 * Number of followers
 * Number of GitHub stars
 * Number of users following
+* Number of stars
 
 
 ## Bugs
