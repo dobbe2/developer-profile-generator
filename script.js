@@ -55,7 +55,7 @@ function init() {
                         data.color = 3;
                         break;
                 }
-                console.log(data.color)
+                // console.log(data.color)
 
                 //setting all needed data from github api to dynamically create
                 data.username = username; //dobbe2
@@ -67,12 +67,25 @@ function init() {
                 data.blog = response.data.blog;//
                 data.bio = response.data.bio;
                 data.location = response.data.location;
-                console.log(data.username, data.numRepos, data.name, data.followers, data.portPic, data.blog, data.bio)
+                axios.get (`https://api.github.com/users/${data.username}/repos?`)
+                .then (function(res){
+                    console.log(res)
+                    data.stars=0
+                    for(var i=0;i<res.data.length;i++){
+                        data.stars = data.stars + res.data[i].stargazers_count
+                    }
+
+                    
+                    console.log(data.stars)
+                // console.log(data.username, data.numRepos, data.name, data.followers, data.portPic, data.blog, data.bio)
 
                 //the HTML code in a variable
                 let pageHTML = generateHTML(data);
                 console.log(pageHTML);
 
+                fs.writeFile("profile.html",pageHTML,function(){
+
+                })
                 conversion({ html: pageHTML }, function(err, result) {
                     if (err) {
                         return console.error(err);
@@ -84,6 +97,8 @@ function init() {
                     result.stream.pipe(fs.createWriteStream('./newDevPDF.pdf'));
                     conversion.kill();
                 })
+
+            })
             })
     })
 ;}
@@ -302,7 +317,7 @@ const colors = [
             <div class="row">
                 <div class="card col">
                     <h3>Stars</h3>
-                    Coming Soon!
+                    ${data.stars}
                 </div>
                 <div class="card col">
                     <h3>Following</h3>
