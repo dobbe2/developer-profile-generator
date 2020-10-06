@@ -5,7 +5,7 @@
   "main": "createHTML.js",
   "dependencies": {
     "axios": "^0.19.2",
-    "electron": "^8.0.0",
+    "electron": "^8.5.1",
     "electron-html-to": "^2.6.0",
     "fs": "^0.0.1-security",
     "inquirer": "^7.0.4"
